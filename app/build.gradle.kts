@@ -22,6 +22,14 @@ android {
             useSupportLibrary = true
         }
     }
+    signingConfigs {
+        create("release") {
+            storeFile = file("todoapp.jks")
+            storePassword = "todo@123"
+            keyAlias = "todo"
+            keyPassword = "todo@123"
+        }
+    }
 
     buildTypes {
         release {
